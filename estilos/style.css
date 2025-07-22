@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-image: linear-gradient(to top, #32264b88, #4c266898);
+    color: white;
+}
+
+main {
+    position: relative;
+    min-height: 100dvh; /* melhor que vh no mobile */
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+
+    background-image: linear-gradient(45deg, #301f3d98, #2a233b );
+    width: 800px;
+    height: 530px;
+    border-radius: 20px;
+    box-shadow: 1px 10px 50px rgba(0, 0, 0, 0.747);
+
+    transform: translate(-50%,-50%);
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+}
+
+section#login > div#imagem {
+    display: block;
+    background: #2B2738 url(../imagens/mountain-minimal-4k.jpg) no-repeat;
+    height: 200px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+    background-size: cover;
+    background-position: center;
+    float: left;
+    width: 53%;
+    height: 94%;
+    margin: 17px;
+    border-radius: 10px;
+
+}
+
+section#login > div#formulario {
+    transform: translate(5%,10%);
+    padding: 50px;
+    display: block;
+}
+
+section#login > div#formulario > h1 {
+    font-size: 40px;
+    transform: translateY(-42px);
+}
+
+section#login > div#formulario > p#jatemconta {
+    font-size: 14px;
+    color: rgb(203, 206, 209);
+    transform: translateY(-30px);
+}
+
+a#facalogin , a#termos {
+    text-decoration: none;
+    color: #c09adb;
+    padding: 7px; /* Ajusta o padding para melhor espaçamento */
+}
+
+p > a#facalogin:hover {
+    text-decoration: underline;
+}
+p > a:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: none;
+}
+
+div.campo1 > input , div.campo2 > input {
+    background-color: #4e475e;
+    display: block;
+    font-size: 1em;
+    width: 115px;
+    height: 37px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 14px;
+    float: left; /* Para que os campos fiquem lado a lado */
+}
+
+div.campo1 > input {
+    float: left; /* Para que os campos fiquem lado a lado */
+}
+
+div.campo2 > input {
+    transform: translateX(10px);
+}
+
+div.campo > input {
+    background-color: #4e475e;
+    display: block;
+    
+    font-size: 1em;
+    width: 240px;
+    height: 37px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 14px;
+}
+
+#campobox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    
+}
+
+label#termo {
+    font-size: 13px;
+    color: rgb(203, 206, 209);
+    transform: translateX(-47px);
+    display: inline;
+    float: none;
+    transform: none;
+}
+
+label#termo > a:hover {
+    text-decoration: underline;
+}
+
+form > input[type=submit] {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    font-size: 1.2em;
+    height: 40px;
+    width: 240px;
+    background-color: #6E56B3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+form > input[type=submit]:hover {
+    background-color: #5a4792;
+}
+
+.divider {
+    color: #c0c0c0;
+    transform: translateX(-28px);
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    font-size: 0.8em;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9%;
+    height: 1px;
+    background: #c0c0c0;
+}
+.divider::before {
+    left: 0;
+    transform: translateX(437px);
+}
+.divider::after {
+    right: 0;
+    transform: translateX(-27px);
+}
+
+article {
+    padding-top: 10px;
+}
+
+.brand-link {
+transition: all 0.3s ease;
+}
+
+.brand-link:hover {
+   box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);
+}
+
+.brand-logo {
+    width: 20px;
+    height: 20px;
+    
+}
+
+a#google , a#apple { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: aliceblue;
+    text-decoration: none;
+    width: 115px;
+    height: 37px;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.644);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.253);
+}
+
+a#google {
+    float: left; /* Para que os campos fiquem lado a lado */
+}
+
+a#apple {
+    transform: translateX(-52px);
+    float: right; /* Para que os campos fiquem lado a lado */
+}
+
+a#google:hover {
+    transform: translateY(-2px);
+}
+
+a#apple:hover {
+    transform: translateY(-2px)
+    translateX(-52px)
+}
